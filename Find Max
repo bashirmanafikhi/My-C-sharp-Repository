@@ -1,0 +1,22 @@
+int? FindMax(int[,] x)
+        {
+            int n, m, l;
+            l = 0;
+            m = x.GetLength(0);
+            n = x.GetLength(1);
+            if (m==0 || n==0)
+            {
+                return null;
+            }
+            for (int i = 0 ; i < n; i++)
+            {
+                for (int j = 0; i < m; i++)
+                {
+                    if (l<x[i,j])
+                    {
+                        l = x[i, j];
+                    }
+                }
+            }
+            return l;
+        }
